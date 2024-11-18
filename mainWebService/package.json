@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node .",
+    "build": "docker compose build",
+    "create": "docker compose create",
+    "up": "docker compose up",
+    "down": "docker compose down",
+    "background": "docker compose up -d"
   },
   "keywords": [],
   "author": "",

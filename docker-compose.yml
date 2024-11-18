@@ -6,7 +6,6 @@ services:
     depends_on:
       - db
       - cache
-      - app
   db:
     image: postgres
     ports:
@@ -24,10 +23,6 @@ services:
     command: ["redis-server"]
     volumes:
       - redisdata:/data
-  app:
-    build: ./app
-    ports:
-      - "4000:4000"
 volumes:
   pgdata:
   redisdata:

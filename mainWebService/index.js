@@ -3,7 +3,7 @@ const proxy = require('express-http-proxy');
 const app = e()
 const {Client} = require("pg")
 const {createClient} = require("redis")
-const cacheTime = 10000
+const cacheTime = /* Seconds */ 10*/* Ignore this */1000
 
 let lastCachedUsers
 
@@ -69,7 +69,7 @@ app.get("/api/initTable", (req, res) => {
     })
 })
 
-app.use("/app", proxy("app:4000"))
+//app.use("/app", proxy("app:4000"))
 
 const port = 3000
 
